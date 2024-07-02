@@ -55,6 +55,9 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'irb', '1.10.0'
   gem 'repl_type_completor', '0.1.2'
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
   gem 'solargraph', '0.50.0'
   gem 'web-console'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]

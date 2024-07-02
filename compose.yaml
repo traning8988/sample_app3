@@ -4,12 +4,16 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
   web:
     build:
       context: .
       dockerfile: Dockerfile.dev
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
     volumes:
       - .:/sample_app3
     ports:
